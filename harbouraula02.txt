@@ -1,0 +1,136 @@
+1º //Executador admin
+2º d: //entrar no hdd secundário()
+3º cd sgtrainee //
+4º //Exercício 1 Hello World
+/*Padrão SG exe01 de nomenclatura de exercicios;
+Editor IDE: Arsenal Tools (Q)
+Harbour Extensão.prg
+Exemplo:q(Editor de text) exe01.prg(nome do arquivo com extensão)*/
+Topo esquerdo 00
+00-24(25 linhas)
+00-79(80 colunas)
+Informação na tela aspas simples(say'')
+Salvar arquivo : CTRL+ K + S
+Sair para compilar : ALT+ X
+Volta para CMD
+Compilar o arquivo : hbmk2 exe01.prg
+executar : exe01.exeo
+Sempre colocar clear no começo dos programas*
+Exercício 1 Hello world;
+	clear
+	@ 12,01 say 'alô mundo!'
+Bordas
+	@04,20 to 10,70
+Comando inKey(0)
+	Temporizador 
+	0 é quantidade de segundos aguardando
+	0 vai pausar até uma tecla for apertada
+	Equivalente à Console.readKey()
+	5 segundos == (0.5)
+ALT + C 
+	Kill programa
+@ 05,01 say Replicate('*',70)
+	Replica Caracteres
+Tela de atalho F4
+	Duplica linha
+Set color to W/B
+	W = Cor da letra
+	B = Cor do fundo
+		Tabela de cores
+			N = Preto
+			B = Azul
+			R = Vermelho
+			G = Verde
+			RB = Magenta
+			W = Branco
+		Cor da letra apenas 
+			N+ Cinza
+			B+ Azul claro
+			R+ Vermelho Claro
+			G+ Verde Claro
+			W+ Branco Neve
+			RB+ Rosa Claro
+			BG+ Ciano Claro
+			GR+ Amarelo Claro
+			#Se for usar essas letras para o fundo troca o + por *
+	set color to
+		Retorna as cores padrão Letra branca sobre tela preta
+Pode se usar clear para setar outra cor como um input de senha
+Qual dos três inputs é o maior
+	nMaior:= 0
+	INPUT "Digite um número" TO nValor1
+	INPUT "Digite um número" TO nValor2
+	INPUT "Digite um número" To nValor3
+		if nValor1>nValor2
+			nMaior = nValor
+		else
+			nMaior = nValor2
+		if nMaior > nValor3
+			nMaior = nMaior
+		else
+			nMaior = nValor3
+	@ 01,01 say 'O Maior Número foi', nMaior
+	//Opção de usar read no lugar do input
+	Vlademiro Landim Junior
+	TCC Linguagem Harbour
+//////////////////////////////////////////////////////////////////////////////////
+Dia 3 Variáveis Numéricas 
+	nNumero :=
+		Colocar espaço entre a variável e o simbolo recebe e depois também*
+		Aliarem apenas em bloco de variaveis indentação 
+	+Str(Variavel dentro)
+		Função de converter Numeric to string
+		Mesmo função no Python
+	CTRL+ H 
+		Auto completa o nome de uma variável 
+		Se não existir ele retorna como uma variavel não existente 
+	Retirar espaço em branco de strings
+		@ 00,00 say 'Algum texto' +alltrim(Str(nVariavel))
+		Geralmente não se usa o Rtrim e o Ltrim apenas o Alltrim
+		Rtrim Remove o espaço da direita
+		Ltrim Remove espaço em branco a esquerda
+		Alltrim só funciona para texto
+	@ nLinhainicial,nColunaInicial clear to nLinhaFinal,nColunaFinal
+		Limpa uma região na tela
+	@ 2,10 say 'Teste de cor' color 'GR+/R'
+		Adiciona cor apenas para a Linha
+		Informar as informações tem que ser antes do color
+		Ultima informação 
+	PadC(cTexto,nTamanho,cPreenchimento)
+		Retorna o texto centralizado
+		Cria paddings passando 3 argumentos
+		cTexto String a ser exibido
+		nTamanho Tamanho do padding 
+		cPreenchimento Default := espaço vazio //se quiser=>
+		Preencher com traços colocar no local (-)
+		@ 2,0 say PadC('SG Trainee',80,'-')
+		//Variantes 
+			PadR adiciona padding a direita
+			PadL adiciona padding a esquerda
+			PadC centraliza adiciona padding a esquerda ou direita
+	ALT + D 
+		Corta e guarda na memória na linha
+	CTRL + U
+		Recupera na linha selecionada
+	Dica
+		Criar uma moldura para auxiliar na posição dos elemnentos do sistema
+
+Exercicio Da apostila 
+clear                                                                          │
+clear                                                                          │
+//Exercício 3                                                                  │
+set color to G/B                                                               │
+@ 00,00 clear to 10,50                                                         │
+nNumero := 10                                                                  │
+nNumero2 := 20                                                                 │
+nResultado:= nNumero*nNumero2                                                  │
+@ 00,00 to 10,50 double                                                        │
+@ 03,01 clear to 06,01                                                         │
+@ 02,01 say Replicate('-',49)                                                  │
+set color to B/G                                                               │
+@ 01,01 say PadC('Sistema de multiplicao',49,)                                 │
+@ 03,01 say PadC('Valor1 = '+Alltrim(Str(nNumero)),49)                         │
+@ 04,01 say PadC('Valor2 = '+Alltrim(Str(nNumero2)),49)                        │
+@ 05,01 say PadC('Resultado da multiplicacao = '+Alltrim(Str(nResultado)),49)  │
+inKey(0)                                                                       │
+/*

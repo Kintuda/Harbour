@@ -127,7 +127,11 @@ Entrada de dados
 	@ 02,20 GET nNumero2
 	read
 	*A variavel a ser editada precisa ser criada antes de executar get 
-Seccionar partes do programa
+	Agrupar o GET
+	Identar os GET na mesma coluna (boas práticas)
+Seccionar partes do programa (criar blocos)
+	Agrupar GETS SAYS variaveis em blocos diferente para melhorar a leitura de
+	codigo
 	Parte onde determinas as variáveis 
 	Outra parte lógica
 	

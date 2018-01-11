@@ -127,8 +127,11 @@ Entrada de dados
 	@ 02,20 GET nNumero2
 	read
 	*A variavel a ser editada precisa ser criada antes de executar get 
-	Agrupar o GET
-	Identar os GET na mesma coluna (boas práticas)
+	GET
+		Agrupar o GET
+		Identar os GET na mesma coluna (boas práticas)
+		GET possui espaço de 10 linha por padrão
+		Números seram alinhados a direita
 Seccionar partes do programa (criar blocos)
 	Agrupar GETS SAYS variaveis em blocos diferente para melhorar a leitura de
 	codigo

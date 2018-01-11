@@ -115,6 +115,29 @@ Dia 3 Variáveis Numéricas
 	Dica
 		Criar uma moldura para auxiliar na posição dos elemnentos do sistema
 
+/////////////////////////////////////////////////////////////////////////////////////////
+Dia 4
+Entrada de dados
+	Get edita o valor de uma variavel
+	nNumero1 := 0
+	nNumero2 := 0
+	@ 01,01 say 'Digite o numero 1'
+	@ 02,01 say 'Digite o numero 2'
+	@ 01,20 GET nNumero1
+	@ 02,20 GET nNumero2
+	read
+	*A variavel a ser editada precisa ser criada antes de executar get 
+Seccionar partes do programa
+	Parte onde determinas as variáveis 
+	Outra parte lógica
+	
+Exercício 6
+
+
+
+
+
+
 Exercicio Da apostila 
 clear                                                                          │
 clear                                                                          │

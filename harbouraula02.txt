@@ -137,6 +137,8 @@ Seccionar partes do programa (criar blocos)
 	codigo
 	Parte onde determinas as variáveis 
 	Outra parte lógica
+set scoreboard off
+	Comando para retirar status do insert no topo do CMD
 	
 Exercício 6
 

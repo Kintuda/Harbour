@@ -143,13 +143,14 @@ set scoreboard off
 Dia 5	
 
 Usando to pode criar linhas verticais e horizontais
-	Formatação de número
+	Formatação de número no get
 		@ 02,20 get nIdade picture '999' (valores inteiros)
 		@ 04,20 get nPeso  picture '999.99' (Valores decimais)
 		@ 06,20 get nPrecoUnitario  picture '@e 999,999.99' (Valores monetarios)
-			@e possibilita a criação de mostra de valores monetários
+			Possibilita a criação de mostra de valores monetários
 		picture só funciona com picture
-		Também delimita o  máximo de caracteres aceito no get
+		Também delimita o  máximo de caracteres aceito no GET OU no SAY
+		
 
 
 

@@ -139,7 +139,27 @@ Seccionar partes do programa (criar blocos)
 	Outra parte lógica
 set scoreboard off
 	Comando para retirar status do insert no topo do CMD
-	
+/////////////////////////////////////////////////////////////////////////////////////
+Dia 5	
+
+Usando to pode criar linhas verticais e horizontais
+	Formatação de número
+		@ 02,20 get nIdade picture '999' (valores inteiros)
+		@ 04,20 get nPeso  picture '999.99' (Valores decimais)
+		@ 06,20 get nPrecoUnitario  picture '@e 999,999.99' (Valores monetarios)
+			@e possibilita a criação de mostra de valores monetários
+		picture só funciona com picture
+		Também delimita o  máximo de caracteres aceito no get
+
+
+
+
+
+
+
+
+
+
 Exercício 6
 
 

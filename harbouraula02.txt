@@ -147,11 +147,16 @@ Usando to pode criar linhas verticais e horizontais
 		@ 02,20 get nIdade picture '999' (valores inteiros)
 		@ 04,20 get nPeso  picture '999.99' (Valores decimais)
 		@ 06,20 get nPrecoUnitario  picture '@e 999,999.99' (Valores monetarios)
-			Possibilita a criação de mostra de valores monetários
-		picture só funciona com picture
-		Também delimita o  máximo de caracteres aceito no GET OU no SAY
+			Possibilita a delimitar espaço dos get e say e formatar o espaçamento
+			picture funciona sozinha apenas usando alltrim str ocorre erro
+		Também delimita o  máximo de caracteres aceito no GET ou SAY
 		
-
+	Transform(nValor cPicture)
+		Formata o número dentro de um texto
+		@10,02 say 'o valor total e' transform(nTotal,'@E 999,999.99')
+		@12,02 say 'Valor sem espaço ' + alltrim(transform(nTotal,'@E 999,999.99')
+		Transform não funciona no get
+			Nenhuma função funciona no get
 
 
 

@@ -158,7 +158,8 @@ Usando to pode criar linhas verticais e horizontais
 		Transform não funciona no get
 			Nenhuma função funciona no get
 
-
+	ALT+E Abre arquivo
+	ALTN+N ALTERNA ENTRE ARQUIVOS
 
 
 

@@ -166,8 +166,31 @@ Usando to pode criar linhas verticais e horizontais
 
 
 
-
-Exercício 6
+//////////////////////////////////
+Dia 6
+INPUT DE STRING
+	cNome := Space(50) // Tamanho do alocador de espaço para o get
+	@ 01,01 say 'nome: '
+	@ 01,07 get cNome picture '@!' //Mascara @! para colocar as strings para maiúsculo ToUpper()
+Data
+	dData 	   := CtoD('') //CtoD caractere to date conversor de string para data
+	// Método de inicar um variavel data
+	dDataAtual := Date() //Retorna dado data
+	@ 01,20 get dData
+	@ 02,20 get dDataAtual
+		Formatação automática 
+		Não é necessário um picture para formatar a variável
+	read
+	Set Date British
+		Transforma a data do modo Americano MM/DD/AAA (Default) para o modo Britânico DD/MM/AA
+	Set Epoch to 1940
+		Coloca o padrao no inicio da ano inicial 
+		Harbour só retorna os dois últimos digitos do ano
+		range 1940 até 2039
+	Set Century on
+		Por padrao ultiliza apenas dois dígitos ou seja off
+		Habilita a ultilização dos quatros digitos no ano
+	Exercício 6
 
 
 

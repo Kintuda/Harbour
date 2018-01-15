@@ -14,13 +14,13 @@ Salvar arquivo : CTRL+ K + S
 Sair para compilar : ALT+ X
 Volta para CMD
 Compilar o arquivo : hbmk2 exe01.prg
-executar : exe01.exeo
+executar : exe01.exe
 Sempre colocar clear no começo dos programas*
 Exercício 1 Hello world;
 	clear
 	@ 12,01 say 'alô mundo!'
 Bordas
-	@04,20 to 10,70
+	@ 04,20 to 10,70
 Comando inKey(0)
 	Temporizador 
 	0 é quantidade de segundos aguardando

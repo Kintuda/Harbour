@@ -160,7 +160,7 @@ Usando to pode criar linhas verticais e horizontais
 
 	ALT+E Abre arquivo
 	ALTN+N ALTERNA ENTRE ARQUIVOS
-
+	
 
 
 
@@ -190,6 +190,8 @@ Data
 	Set Century on
 		Por padrao ultiliza apenas dois dígitos ou seja off
 		Habilita a ultilização dos quatros digitos no ano
+	Transforma data para usar com string
+		DtoC(dData)
 	Exercício 6
 
 

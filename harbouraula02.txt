@@ -140,9 +140,9 @@ Seccionar partes do programa (criar blocos)
 set scoreboard off
 	Comando para retirar status do insert no topo do CMD
 /////////////////////////////////////////////////////////////////////////////////////
-Dia 5	
+					Dia 5	
 
-Usando to pode criar linhas verticais e horizontais
+Usando 'to' para criar linhas verticais e horizontais
 	Formatação de número no get
 		@ 02,20 get nIdade picture '999' (valores inteiros)
 		@ 04,20 get nPeso  picture '999.99' (Valores decimais)
@@ -167,7 +167,7 @@ Usando to pode criar linhas verticais e horizontais
 
 
 //////////////////////////////////
-Dia 6
+					Dia 6
 INPUT DE STRING
 	cNome := Space(50) // Tamanho do alocador de espaço para o get
 	@ 01,01 say 'nome: '
@@ -194,6 +194,32 @@ Data
 		DtoC(dData)
 	Modo sem usar uma variável
 		@ 10,02 say 'Data Atual' + DtoC(Date())
+		
+		
+		
+//////////////////////////////
+					Dia 7
+
+Colocar verificações no input do usuário
+	Ex
+	cNome    := space(50)
+	nIdade   := 0
+	nValor   := 0
+	dEmissao := CtoD('')
+	cSexo    := Space(1)
+	(conjunto de SAYs)
+	@ 02,25 get cNome picture '@!'   	   valid !empty(cNome)
+	@ 03,25 get nIdade picture '999'           valid nIdade > 0 .and. nIdade <=120
+	@ 04,25 get nValor picture '@E 9,999.99'   valid nValor >= 0
+	@ 05,25 get dEmissao		           valid !empty(dEmissao) and dEmissao <= Date()
+	@ 06,25 get cSexo 			   valid cSexo == 'F' .or. 'M'
+	read
+		valid << expressão lógica >>
+		valid só funciona com get
+		
+
+
+
 	Exercício 6
 
 

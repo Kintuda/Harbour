@@ -192,6 +192,8 @@ Data
 		Habilita a ultilização dos quatros digitos no ano
 	Transforma data para usar com string
 		DtoC(dData)
+	Modo sem usar uma variável
+		@ 10,02 say 'Data Atual' + DtoC(Date())
 	Exercício 6
 
 

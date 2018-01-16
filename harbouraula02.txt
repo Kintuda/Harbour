@@ -214,7 +214,7 @@ Colocar verificações no input do usuário
 	@ 05,25 get dEmissao		           valid !empty(dEmissao) and dEmissao <= Date()
 	@ 06,25 get cSexo 			   valid cSexo == 'F' .or. 'M'
 							 //Pode ser usado desse modo 
-							 cSexo $ 'MF' //Usado apenas para caracteres 
+							 cSexo $ 'MF' //Usado apenas para caracteres  ou strings 
 	read
 		valid << expressão lógica >>
 		valid só funciona com get

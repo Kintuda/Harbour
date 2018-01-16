@@ -219,9 +219,23 @@ Colocar verificações no input do usuário
 		valid << expressão lógica >>
 		valid só funciona com get
 		
-
-
-
+Uso do if
+	if <Condição>
+	.
+	   <comandos>
+	endif
+	indentacao
+	if nValor == 0   //Modo nao usado
+ 	   @say
+	Metodo SG
+	if Empty(nValor) //Usar no lugar de nValor == 0
+		@ 04,10 say 'Este valor esta zerado'
+	endif
+	//Se o valor não esta vazio
+	if nValor !Empty(nValor)
+		@ 04,10 say 'Valor não está vazio'
+	endif
+	
 	Exercício 6
 
 

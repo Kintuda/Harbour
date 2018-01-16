@@ -213,6 +213,8 @@ Colocar verificações no input do usuário
 	@ 04,25 get nValor picture '@E 9,999.99'   valid nValor >= 0
 	@ 05,25 get dEmissao		           valid !empty(dEmissao) and dEmissao <= Date()
 	@ 06,25 get cSexo 			   valid cSexo == 'F' .or. 'M'
+							 //Pode ser usado desse modo 
+							 cSexo $ 'MF' //Usado apenas para caracteres 
 	read
 		valid << expressão lógica >>
 		valid só funciona com get

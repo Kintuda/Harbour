@@ -240,7 +240,54 @@ Uso do if
 	trocar a cor dos get
 		Set color to to W/N, W+/R //O valor depois da virgula muda a  cor do get
 					  //W+/R
-	Exercício 6
+
+/////////////////////////
+Dia 8
+	17/01/2018
+
+Else if
+
+	if <condicao logica>
+		<comandos se .t.>
+	else
+		<comandos se .f.>
+	endif
+
+--------------------------------------
+
+	if <condicao>
+		<comandos>
+	elseif <condicao 2>
+		<comandos>
+	elseif <condicao 3>
+		<comandos>
+	else 
+		<comandos>
+	endif
+---------------------------------------------
+Ex
+	cCategoria := space(1)
+	@ 02,10 get cCategoria picture '@!'    valid cCategoria $ 'ABCDE'
+	read 
+	if cCategoria == 'A'
+		'Moto'
+	if cCategoria == 'B'
+		'Carro'
+	if cCategoria == 'C'
+	if cCategoria >= 'C'
+	else
+		'Nao habilitado'
+ 
+	Operadores também funciona em strings 
+	Clipper evitar repetições em if e else 
+	Reduzir codigo
+
+	ALT + L
+	Shift + F7
+	Shift + F8
+
+
+Exercício 6
 
 
 

@@ -236,6 +236,10 @@ Uso do if
 		@ 04,10 say 'Valor não está vazio'
 	endif
 	
+	
+	trocar a cor dos get
+		Set color to to W/N, W+/R //O valor depois da virgula muda a  cor do get
+					  //W+/R
 	Exercício 6
 
 

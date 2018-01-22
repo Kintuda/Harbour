@@ -28,12 +28,19 @@ nNota4            := 0
 cMateriasDp       := ''
 cStatus           := space(10)
 nDp               := 0
+cMatAStat         := space(10)
+cMatBStat         := space(10)
+cMatCStat         := space(10)
+cMatDStat         := space(10)
 //Variaveis de falta
 cVoto1            := space(1)
 cVoto2            := space(1)
 cVoto3            := space(1)
 cVoto4            := space(1)
-cVotosReprovar    := ''
+cVotoA            := ''
+cVotoB            := ''
+cVotoC            := ''
+cVotoD            := ''
 nFaltas1          := 0
 nFaltas2          := 0
 nFaltas3          := 0
@@ -42,6 +49,7 @@ nFaltasA          := 0
 nFaltasB          := 0
 nFaltasC          := 0
 nFaltasD          := 0
+cCor              := ''
 //Bolsista
 cStatusBolsa      := space(1)
 nPorcentagem      := 0
@@ -181,57 +189,129 @@ read
 nFaltasD := nFaltas1+nFaltas2+nFaltas3+nFaltas4
 nMediaMatD := (nNota1+nNota2+nNota3+nNota4)/4
 if nMediaMatA >= 6.and.nFaltasA < 48
-   @ 16,70 say 'Aprovado'
+   cMatAStat := 'Aprovado'
    @ 16,60 say alltrim(Str(nMediaMatA))  color 'N/G'
 elseif nMediaMatA >= 6 .and. nFaltasA >= 48 .and. nFaltasA <= 56
+   @ 21,03 say cMateriaA
    @ 22,03 say alltrim('Voto 1 (S/N): ')
-   @ 22,16 get cVoto1
+   @ 22,16 get cVoto1   picture '@!'
    @ 22,35 say alltrim('Voto 2 (S/N): ')
-   @ 22,48 get cVoto2
+   @ 22,48 get cVoto2   picture '@!'
    @ 22,60 say alltrim('Voto 3 (S/N): ')
-   @ 22,73 get cVoto3
-
+   @ 22,73 get cVoto3   picture '@!'
+   read
+   cVotoA += cVoto1 + cVoto2 + cVoto3
+   if cVotoA == 'SSS'
+      cMatAStat := 'Reprovado'
+   elseif cVotoA == 'SNS'
+      cMatAStat := 'Reprovado'
+   elseif cVotoA == 'SSN'
+      CMatAStat := 'Reprovado'
+   elseif cVotoA == 'NSS'
+      cMatAStat := 'Reprovado'
+   else
+      cMatAStat := 'Aprovado'
+   endif
 else
-   @ 16,70 say 'Reprovado'
+   cMatAStat := 'Reprovado'
    @ 16,60 say alltrim(Str(nMediaMatA))  color 'N/R'
    nDp++
    cMateriasDp += cMateriaA
 endif
 if nMediaMatB >= 6.and. nFaltasB < 48
-   @ 17,70 say 'Aprovado'
+   cMatBStat := 'Aprovado'
    @ 17,60 say alltrim(Str(nMediaMatB))  color 'N/G'
+elseif nMediaMatB >= 6 .and. nFaltasB >= 48 .and. nFaltasB <= 56
+   @ 21,03 say cMateriaB
+   @ 22,03 say alltrim('Voto 1 (S/N): ')
+   @ 22,16 get cVoto1   picture '@!'
+   @ 22,35 say alltrim('Voto 2 (S/N): ')
+   @ 22,48 get cVoto2   picture '@!'
+   @ 22,60 say alltrim('Voto 3 (S/N): ')
+   @ 22,73 get cVoto3   picture '@!'
+   read
+   cVotoB += cVoto1+cVoto2+cVoto3
+   if cVotoB == 'SSS'
+      cMatBStat := 'Reprovado'
+   elseif cVotoB == 'SNS'
+      cMatBStat := 'Reprovado'
+   elseif cVotoB == 'SSN'
+      CMatAStat := 'Reprovado'
+   elseif cVotoB == 'NSS'
+      cMatBStat := 'Reprovado'
+   else
+      cMatBStat := 'Aprovado'
+   endif
 else
-   @ 17,70 say 'Reprovado'
+   cMatBStat := 'Reprovado'
    @ 17,60 say alltrim(Str(nMediaMatB))  color 'N/R'
    nDp++
    cMateriasDp += cMateriaB
 endif
 if nMediaMatC > 6.and. nFaltasC < 48
-   @ 18,70 say 'Aprovado'
+   cMatCStat := 'Aprovado'
    @ 18,60 say alltrim(Str(nMediaMatC))    color 'N/G'
+elseif nMediaMatC >= 6 .and. nFaltasC >= 48 .and. nFaltasC <= 56
+   @ 21,03 say cMateriaC
+   @ 22,03 say alltrim('Voto 1 (S/N): ')
+   @ 22,16 get cVoto1    picture '@!'
+   @ 22,35 say alltrim('Voto 2 (S/N): ')
+   @ 22,48 get cVoto2    picture '@!'
+   @ 22,60 say alltrim('Voto 3 (S/N): ')
+   @ 22,73 get cVoto3    picture '@!'
+   read
+   cVotoC += cVoto1+cVoto2+cVoto3
+   if cVotoC == 'SSS'
+      cMatCStat := 'Reprovado'
+   elseif cVotoC == 'SNS'
+      cMatCStat := 'Reprovado'
+   elseif cVotoC == 'SSN'
+      CMatCStat := 'Reprovado'
+   elseif cVotoC == 'NSS'
+      cMatCStat := 'Reprovado'
+   else
+      cMatCStat := 'Aprovado'
+   endif
 else
-   @ 18,70 say 'Reprovado'
+   cMatCStat := 'Reprovado'
    @ 18,60 say alltrim(Str(nMediaMatC))    color 'N/R'
    nDp++
    cMateriasDp += cMateriaC
 endif
 if nMediaMatD > 6.and. nFaltasD < 48
-   @ 19,70 say 'Aprovado'
+   cMatDStat := 'Aprovado'
    @ 19,60 say alltrim(Str(nMediaMatD))  color 'N/G'
+elseif nMediaMatD >= 6 .and. nFaltasD >= 48 .and. nFaltasD <= 56
+   @ 21,03 say cMateriaD
+   @ 22,03 say alltrim('Voto 1 (S/N): ')
+   @ 22,16 get cVoto1   picture '@!'
+   @ 22,35 say alltrim('Voto 2 (S/N): ')
+   @ 22,48 get cVoto2   picture '@!'
+   @ 22,60 say alltrim('Voto 3 (S/N): ')
+   @ 22,73 get cVoto3   picture '@!'
+   read
+   cVotoD := cVoto1+cVoto2+cVoto3
+   if cVotoD == 'SSS'
+      cMatDStat := 'Reprovado'
+   elseif cVotoD == 'SNS'
+      cMatDStat := 'Reprovado'
+   elseif cVotoD == 'SSN'
+      CMatDStat := 'Reprovado'
+   elseif cVotoD == 'NSS'
+      cMatDStat := 'Reprovado'
+   else
+      cMatDStat := 'Aprovado'
+   endif
 else
-   @ 19,70 say 'Reprovado'
+   cMatDStat := 'Reprovado'
    @ 19,60 say alltrim(Str(nMediaMatD))  color 'N/R'
    nDp++
    cMateriasDp += cMateriaD
 endif
-//Conselho
-@ 22,03 say alltrim('Voto 1 (S/N): ')
-@ 22,16 get cVoto1
-@ 22,35 say alltrim('Voto 2 (S/N): ')
-@ 22,48 get cVoto2
-@ 22,60 say alltrim('Voto 3 (S/N): ')
-@ 22,73 get cVoto3
-
+@ 16,70 say alltrim(cMatAStat)
+@ 17,70 say alltrim(cMatBStat)
+@ 18,70 say alltrim(cMatCStat)
+@ 19,70 say alltrim(cMatDStat)
 
 //Sistema Aprovado/reprovado
 if nDp > 3
@@ -257,7 +337,7 @@ elseif nDp == 2
       nMensalidade     := (nNovaMensalidade*2) + nMensalidade
       cFinal := 'O aluno '+alltrim(cNome) + ' foi ' + cStatus + ' em ' +alltrim(cMateriasDp)
    endif
-Else
+else
    cStatus := 'Aluno Aprovado'
    cFinal := 'O aluno '+alltrim(cNome) + ' foi ' + cStatus
 
@@ -270,5 +350,7 @@ endif
 @ 24,03 say cFinal
 @ 25,03 say 'Valor da mensalidade: '
 @ 25,30 say nMensalidade    picture '@e 999,999.99'
+Alert('Teste final',,'W/B')
+
 inKey(0)
 

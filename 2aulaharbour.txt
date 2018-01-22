@@ -1,0 +1,12 @@
+Concaternação do IFs
+uso de menos says
+Criação de variaveis para demonstar valor
+Conselho de cla  sse apenas faltas
+
+
+Colocar color sem repetir o say
+	Usar uma variavel para guardar a string da cor 
+Comando alert
+Ajuda em desbugar o codigo
+Alert('Mensagem de parada,,'W+/B)
+Mostra uima mensagem na tela 

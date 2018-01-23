@@ -289,7 +289,37 @@ Ex
 
 Exercício 6
 
+Dia 23/01/2018
+Year = Retorna o ano
+Month = Retorna o mes
+Day   = retorna o dia
+dow  = dia da semana em numero
 
+Ex 
+	nAno := Year(Date())
+	Exercicio Maringá, 23 de janeiro (Terca-feira) de 2018
+
+Concaternação do IFs
+uso de menos says
+Criação de variaveis para demonstar valor
+Conselho de cla  sse apenas faltas
+
+
+Colocar color sem repetir o say
+	Usar uma variavel para guardar a string da cor 
+Comando alert
+Ajuda em desbugar o codigo
+Alert('Mensagem de parada,,'W+/B)
+Mostra uima mensagem na tela 
+
+Tentar usar menos funções 
+ex
+dHoje := Date()
+nAno  := Year(dHoje)
+nMes  := Month(dHoje) <==| desse modo
+
+
+CTRL + J Vai direto a linha digitada
 
 
 

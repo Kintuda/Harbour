@@ -1,0 +1,115 @@
+----------------------------------------
+Dia 24/01/2017
+do while .t.
+	cNome := Space(50)
+	@ 02,02 say 'Nome'
+	@ 02,07 get cNome picture '@!'
+	read
+	if LastKey() == 27
+		exit
+	endif
+
+<Resto do programa>
+Tecla 27 == esc
+Tecla 13 == Enter
+****Função IF LastKey Tem que estar logo abaixo do read
+**LastKey() Função que retorna o última tecla pressionada
+**
+
+do while .t.
+	nNumeros := 0
+	@ 02,02 get nNumeros picture '9'
+	read
+	if LastKey() == 27
+		exit
+	endif
+	nContador := 1 
+	do while nContador <= nNumeros
+		nValor := 0
+		@ nContador+3,10 get nValor picture '999
+		read
+		if LastKey() == 27
+			exit
+		endif
+		if nValor < 0
+			alert('Valor negativo',,W/B)
+			loop
+		endif
+		if nValor > nMaior
+			nMaior := nValor
+		endif
+		nContador++
+	enddo
+	if LastKey() == 27
+		loop
+	endif
+	@ 23,02 say nMaior
+	inKey(0)
+enddo
+
+
+Exercicio
+Prova
+Sair das notas retorna aos dados aluno ou seja dois while um nos dados e outro nas notas
+------------------------------------------------------------------------------------------
+
+nOpcao := Alert('Confirma?',{'Sim','Nao'})
+if nOpcao == 1
+	alert('Voce escolheu SIM')
+elseif nOpcao == 2
+	Alert('Voce escolheu NAO')
+elseif nOpcao == 0
+	Alert('Voce teclou ESC')
+endif
+
+Alert sempre retornará valor numerico
+valore sim = 1 nao = 2 esc = 0
+
+EX----------------
+
+do while .t.
+	cAluno := space(50)
+	nSerie := 0
+	@ 02,10 get cAluno
+	@ 03,10 get nSerie
+	read
+	if LastKey() == 27
+		nOpcao :=('deseja encerrar o programa',{'Sim','Nao'})
+	endif
+	if nOpcao == 1
+		exit
+	endif
+	loop 
+
+EX----------------------------
+nDisciplina := 1
+nLinha      := 6
+do while nDisciplina <= 4
+	cDisciplina := space(20)
+	nNota1      := 0
+	nFaltas1    := 0
+	@ nLinha,05 get cDisciplina
+	@ nLinha,30 get nNota1
+	@ nLinha,35 get nFaltas1
+	. Repetir outras linhas
+	. ex nNota2
+	. ex nFaltas2
+	read
+	if LastKey() == 27
+		nOpcao := Alert('Cancelar digitacao',{'Sim','Nao'},'W/B')
+		if nOpcao == 1
+			exit
+		endif
+	endif
+	nLinha++
+	nDisciplina++
+	nMedia  := (nNota1+nNota2+nNota3+nNota4s)
+	nFaltas := (nFalta1+nFalta2+nFalta3+nFalta4)
+	if nMedia < 6 .or. nFaltas >= 56
+		nReprovado
+	elseif
+	endif
+enddo
+if nOpcao == 1
+	loop
+endif

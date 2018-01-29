@@ -1,4 +1,8 @@
 //Nome: Mohfarrej Kin Tuda Numero: 02
+//Adicionar while no pagamento
+//Adicionar opcao para voltar a cesta de pagamento
+//Adicionar mais verifica‡äes
+//Adicionar outras fun‡äes no sistema
 set Date British
 set Epoch to 1940
 set color to W/B

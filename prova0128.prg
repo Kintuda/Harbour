@@ -114,7 +114,9 @@ do while.t.
       @ 16,53 get nFaltas4    picture '99'   valid nFaltas4 < 63
       read
       if LastKey() == 27
-         loop
+         if alert('Deseja sair do sistema de notas',{'Sim','Nao'},'W/B') == 1
+          exit
+       endif
       endif
        nFaltasA   := nFaltas1+nFaltas2+nFaltas3+nFaltas4
       nMediaMatA  := (nNota1 +nNota2+nNota3+nNota4)/4
@@ -142,7 +144,7 @@ do while.t.
 
       read
       if LastKey() == 27
-         loop
+         exit
       endif
       nFaltasB := nFaltas1+nFaltas2+nFaltas3+nFaltas4
       nMediaMatB  := (nNota1+nNota2+nNota3+nNota4)/4
@@ -167,7 +169,9 @@ do while.t.
       @ 18,53 get nFaltas4    picture '99'   valid nFaltas4 < 63
       read
       if LastKey() == 27
-         loop
+         if alert('Deseja sair do sistema de notas',{'Sim','Nao'},'W/R') == 1
+            exit
+         endif
       endif
       nFaltasC := nFaltas1+nFaltas2+nFaltas3+nFaltas4
       nMediaMatC  := (nNota1+nNota2+nNota3+nNota4)/4
@@ -193,7 +197,7 @@ do while.t.
 
       read
       if LastKey() == 27
-         loop
+         exit
       endif
       nFaltasD := nFaltas1+nFaltas2+nFaltas3+nFaltas4
       nMediaMatD := (nNota1+nNota2+nNota3+nNota4)/4

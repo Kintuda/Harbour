@@ -320,6 +320,30 @@ nMes  := Month(dHoje) <==| desse modo
 
 
 CTRL + J Vai direto a linha digitada
+--------------------------------------------
+Len(cTexto) => Retorna o Tamanho do texto ,funciona apenas com texto ou variaveis convertidas
+SubStr(cTexto,nPosicao,[nCaracteres]) => Extrai um pedaço do texto (nCaracteres => especifica quantos caracteres pegar a partir da posicao se nao for passado nada pega todas as carateres a partir da posicao;
+Harbour começa a contagem com 1
+Time() => Retorna a hora atual em formato ("HH-MM-SS") retorna como um texto
+---------------------------------------------
+Editar hora
+EX	get cHora picture '99:99:99:'
+------------------------------------------------
+Ex	LEN()
+	cNome := Space(50)
+	@ 02,10 get cNome
+	read
+	nTamanho := Len(cNome)
+	nTamanho := Len(Alltrim(cNome))
+-----------------------------------------------
+Ex	SubSTR
+	SubStr('Fabio',2,3)
+	SubStr('Fabio',3,2)
+	SubStr('Fabio',1,1)
+	SubStr('Fabio',4,1)
+	SubStr('Fabio',2)
+
+cNome := Alltrim(cNome)
 
 
 

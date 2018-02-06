@@ -1,0 +1,7 @@
+FUNCAO E PROMPT
+Usar funcoes para validacoes ou criacao de telas tudo que nao precisa de retorno de variavel 
+True or false pode usar
+Validar valor validar data 
+validar nome
+Funcao tela cadastro
+Usar funcao para criar telas
